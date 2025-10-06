@@ -1,0 +1,177 @@
+/* Import Google Font for better typography (Poppins is great) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* --- Global Reset and Body Styling --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* ADDED: Ensure the body has enough padding/margin so the container isn't too close to the bottom */
+  padding: 20px;
+  /* New modern background: Light blue/grey gradient or solid */
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+}
+
+/* --- Container Styling --- */
+.container {
+  width: 90%;
+  max-width: 450px; /* Slightly wider card */
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 16px; /* Increased rounding */
+  /* Deep, modern shadow */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.container h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #00796b; /* Dark Teal Primary Color */
+  text-align: center;
+  border-bottom: 2px solid #e0f7fa;
+  padding-bottom: 10px;
+}
+
+/* --- Form and Amount Styling --- */
+.container form {
+  margin: 20px 0 30px 0;
+}
+
+form p {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.amount input {
+  width: 100%;
+  border: 1px solid #c8d3d9;
+  border-radius: 10px;
+  font-size: 19px;
+  height: 3.2rem;
+  padding: 10px 15px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.amount input:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2); /* Teal glow on focus */
+}
+
+/* --- Dropdown and Flag Styling --- */
+.dropdown {
+  display: flex;
+  margin-bottom: 100px;
+
+  margin: 25px 0;
+}
+
+.dropdown > div {
+  flex-grow: 1;
+}
+
+.from,
+.to {
+  flex-basis: 45%; /* Give space for both sides */
+}
+
+.dropdown i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #00796b;
+  margin: 0 10px;
+  /* Center icon vertically between the two select containers */
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.dropdown i:hover {
+  transform: scale(1.1);
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #c8d3d9;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #f8fcfc; /* Very light background for distinction */
+  transition: border-color 0.3s;
+}
+
+.select-container:hover {
+  border-color: #00796b;
+}
+
+.select-container img {
+  max-width: 38px;
+  margin-right: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.select-container select {
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  /* Hide default arrow for cleaner look */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+/* --- Message and Button Styling --- */
+.msg {
+  text-align: center;
+  margin: 30px 0 30px 0;
+  min-height: 20px; /* Reserve space to prevent CLS */
+  font-size: 17px;
+  font-weight: 500;
+  color: #00796b;
+}
+
+form button {
+  width: 100%;
+  height: 3.5rem;
+  padding: 12px;
+  background-color: #004d40; /* Darker Teal for button */
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 77, 64, 0.3);
+  transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+}
+
+form button:hover {
+  background-color: #00796b; /* Lighter Teal on hover */
+  box-shadow: 0 6px 15px rgba(0, 77, 64, 0.4);
+}
+
+form button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 77, 64, 0.2);
+}
